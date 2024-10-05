@@ -2,7 +2,8 @@
 // import Addition from "./components/Addition";
 import Start from "./components/Start";
 import Timer from "./components/Timer";
-// import { cookies } from "./components/Start";
+import Upgrades from "./components/Upgrades";
+// import { cookies } from "./components/Timer";
 // I am going to write all my notes in this component
 
 // You SHOULD divide my notes and tasks into different components whenever possible
@@ -34,7 +35,17 @@ export default function App() {
       {/* we need to render our upgrades shop in here using a new friend - map */}
       <Start />
       <Timer />
-      {/* <Addition /> */}
+      <Upgrades
+      // {
+
+      //   upgradesData.map((upgrades) => (
+      //   <div id="upgrades" key={upgrades.id}>
+      //     {upgrades.name}
+      //     {upgrades.cost}
+      //     {upgrades.increase}
+      //   </div>
+      />
+      {/* <Addition cookies={cookies} /> */}
     </>
   );
 }

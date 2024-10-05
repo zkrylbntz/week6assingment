@@ -11,8 +11,7 @@ export default function Start() {
 
   return (
     <>
-      <p>{cookies}</p>
-      <p>Cookie clicks </p>
+      <p>Cookie clicks: {cookies}</p>
       <img id="big-cookie" onClick={handleCookies} src={cookie} />
     </>
   );

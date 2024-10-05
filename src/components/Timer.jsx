@@ -4,7 +4,7 @@ import useTimer from "../utils/utilities";
 
 export default function Timer() {
   const cookies = useTimer();
-
+  // console.log({ cookies });
   return <div>Cookies per second: {cookies}</div>;
 }
 
