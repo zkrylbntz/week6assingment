@@ -21,5 +21,3 @@ export default function Start({
     </>
   );
 }
-
-// onClick={ () => { f1(); f2();} }
