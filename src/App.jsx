@@ -1,8 +1,9 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // import Addition from "./components/Addition";
 import Start from "./components/Start";
 import Timer from "./components/Timer";
 import Upgrades from "./components/Upgrades";
+// import "./App.css";
 // import { cookies } from "./components/Timer";
 // I am going to write all my notes in this component
 
@@ -10,8 +11,8 @@ import Upgrades from "./components/Upgrades";
 
 export default function App() {
   // we need two states to store the cookies and cookiesPerSecond
-  // let [cookies, setCookies] = useState(0);
-  // let [cookiesPerSecond, setCookiesPerSecond] = useState(0);
+  let [cookies, setCookies] = useState(0);
+  let [cookiesPerSecond, setCookiesPerSecond] = useState(1);
   // we need an interval managed by useEffect
 
   // useEffect(() => {
@@ -33,19 +34,25 @@ export default function App() {
       {/* we need an event to listen to the click on this image */}
       {/* we need to render the cookies number and the cookiesPerSecond number */}
       {/* we need to render our upgrades shop in here using a new friend - map */}
-      <Start />
-      <Timer />
-      <Upgrades
-      // {
-
-      //   upgradesData.map((upgrades) => (
-      //   <div id="upgrades" key={upgrades.id}>
-      //     {upgrades.name}
-      //     {upgrades.cost}
-      //     {upgrades.increase}
-      //   </div>
-      />
-      {/* <Addition cookies={cookies} /> */}
+      <div id="main-container">
+        <div id="start">
+          <Start
+            cookies={cookies}
+            setCookies={setCookies}
+            cookiesPerSecond={cookiesPerSecond}
+            setCookiesPerSecond={setCookiesPerSecond}
+          />
+          <Timer
+            cookies={cookies}
+            setCookies={setCookies}
+            cookiesPerSecond={cookiesPerSecond}
+            setCookiesPerSecond={setCookiesPerSecond}
+          />
+        </div>
+        <div id="upgrades-container">
+          <Upgrades />
+        </div>
+      </div>
     </>
   );
 }

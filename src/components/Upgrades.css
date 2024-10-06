@@ -1,5 +1,16 @@
 #upgrades {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+}
+
+.name-container {
+  width: 150px;
+}
+
+.cost-container {
+  width: 50px;
+}
+
+.increase-container {
+  width: 50px;
 }
